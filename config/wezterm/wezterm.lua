@@ -9,16 +9,16 @@ config = {
     enable_tab_bar = true,
     hide_tab_bar_if_only_one_tab = true,    -- Hide the tab bar when there is only one tab
     window_close_confirmation = "NeverPrompt",
-    window_decorations = "RESIZE", -- disable the title bar but enable the resizable border
+    window_decorations = "NONE", -- disable the title bar but enable the resizable border
     font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
-    font_size = 12.5,
-    color_scheme = "Dracula",
+    font_size = 12,
+    color_scheme = "DanQing (base16)",
     default_cursor_style = 'BlinkingBlock',
     macos_window_background_blur = 25, -- Enable window background blur on macOS
     background = {
         {
             source = {
-                File = "/Users/lzh/dotfiles/config/Arknight_Personal_Terminal.png",
+                File = "/home/lzh/dotfiles/config/Arknight_Personal_Terminal.png",
         },
         hsb = {
             hue = 1.0,
