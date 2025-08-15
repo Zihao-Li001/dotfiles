@@ -1,10 +1,16 @@
 # Linux
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
+# starccm
 export CDLMD_LICENSE_FILE="/home/lzh/Desktop/Crack/license.dat"
 starccm="/opt/Siemens/19.02.009-R8/STAR-CCM+19.02.009-R8/star/bin/"
 export LD_LIBRARY_PATH="$VABS:$LD_LIBRARY_PATH"
 export PATH=$PATH:$starccm:$VABS
+
+# pycharm
 export PATH="/home/lzh/pycharm-2025.1.2/bin:$PATH"
 
+# conda 
 __conda_setup="$('/home/lzh/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"

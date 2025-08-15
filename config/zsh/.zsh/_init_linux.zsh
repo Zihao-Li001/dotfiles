@@ -5,21 +5,6 @@
 eval "$(starship init zsh)"
 
 # ===========================
-# Plugins
-# ===========================
-# zsh-autosuggestions
-# Make sure the plugin is cloned to ~/.zsh/plugins/zsh-autosuggestions
-if [ -f "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
-    source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-fi
-
-# Syntax highlighting
-# Make sure zsh-syntax-highlighting is installed in /usr/share/zsh-syntax-highlighting
-if [ -f "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
-    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-
-# ===========================
 # Extra Initializations
 # ===========================
 # OpenFOAM

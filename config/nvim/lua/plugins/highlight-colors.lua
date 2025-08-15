@@ -1,5 +1,5 @@
 return{
-    'brenoprata10/nvim-highlight-colors',
+    "brenoprata10/nvim-highlight-colors",
     config = function()
         require("nvim-highlight-colors").setup {
             ---Render style
@@ -38,7 +38,7 @@ return{
             enable_ansi = true,
 
           -- Highlight hsl colors without function, e.g. '--foreground: 0 69% 69%;'
-          enable_hsl_without_function = true,
+            enable_hsl_without_function = true,
 
             ---Highlight CSS variables, e.g. 'var(--testing-color)'
             enable_var_usage = true,
@@ -58,10 +58,10 @@ return{
             },
 
             -- Exclude filetypes or buftypes from highlighting e.g. 'exclude_buftypes = {'text'}'
-                exclude_filetypes = {},
-                exclude_buftypes = {},
+            exclude_filetypes = {},
+            exclude_buftypes = {},
             -- Exclude buffer from highlighting e.g. 'exclude_buffer = function(bufnr) return vim.fn.getfsize(vim.api.nvim_buf_get_name(bufnr)) > 1000000 end'
-                exclude_buffer = function(bufnr) end
+            exclude_buffer = function(bufnr) end
         }
     end
 }

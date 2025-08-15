@@ -1,6 +1,7 @@
 -- This is a configuration file for wezterm, a GPU-accelerated terminal emulator for modern workflows.
 
 local wezterm = require("wezterm")
+local home = os.getenv("HOME")
 
 config = wezterm.config_builder()
 
@@ -18,7 +19,7 @@ config = {
     background = {
         {
             source = {
-                File = "/home/lzh/dotfiles/config/Arknight_Personal_Terminal.png",
+                File = home .. "/dotfiles/config/Arknight_Personal_Terminal.png",
         },
         hsb = {
             hue = 1.0,

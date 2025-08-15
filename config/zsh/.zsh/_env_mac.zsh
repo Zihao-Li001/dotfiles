@@ -1,0 +1,18 @@
+# Environment Variables and PATH Setting
+#
+# Terminal
+
+if [[ -n $$SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='vim'
+fi
+
+# --- PATH CONFIG ---
+# New PATH will be added to the top, which means priority
+
+# homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+
+# MacTex
+export PATH="/Library/TeX/texbin:$PATH"
