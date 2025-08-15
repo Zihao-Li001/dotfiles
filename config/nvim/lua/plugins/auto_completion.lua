@@ -67,6 +67,30 @@ return {
                     -- Use treesitter to highlight the label text for the given list of sources
                     draw = {
                         treesitter = { "lsp" },
+                        components = {
+                            kind_icon = {
+                                text = function(ctx)
+                                    local icon = ctx.kind_icon
+                                    if ctx.item.source_name == "LSP" then
+                                        local color_item = require("nvim-highlight-colors").format(ctx.item.documentation, { kind = ctx.kind })
+                                        if color_item and color_item.abbr ~= "" then
+                                            icon = color_item.abbr
+                                        end
+                                    end
+                                    return icon .. ctx.icon_gap
+                                end,
+                                highlight = function(ctx)
+                                    local highlight = "BlinkCmpKind" .. ctx.kind
+                                    if ctx.item.source_name == "LSP" then
+                                        local color_item = require("nvim-highlight-colors").format(ctx.item.documentation, { kind = ctx.kind })
+                                        if color_item and color_item.abbr_hl_group then
+                                            highlight = color_item.abbr_hl_group
+                                        end
+                                    end
+                                    return highlight
+                                end,
+                            },
+                        },
                     },
                 },
                 -- Show completions after typing a trigger character, defined by the source
@@ -75,34 +99,9 @@ return {
                     -- Show documentation automatically
                     auto_show = true,
                 },
-                components = {
-                    kind_icon = {
-                        text = function(ctx)
-                            local icon = ctx.kind_icon
-                            if ctx.item.source_name == "LSP" then
-                                local color_item = require("nvim-highlight-colors").format(ctx.item.documentation, { kind = ctx.kind })
-                                if color_item and color_item.abbr ~= "" then
-                                    icon = color_item.abbr
-                                end
-                            end
-                            return icon .. ctx.icon_gap
-                        end,
-                        highlight = function(ctx)
-                            local highlight = "BlinkCmpKind" .. ctx.kind
-                            if ctx.item.source_name == "LSP" then
-                                local color_item = require("nvim-highlight-colors").format(ctx.item.documentation, { kind = ctx.kind })
-                                if color_item and color_item.abbr_hl_group then
-                                    highlight = color_item.abbr_hl_group
-                                end
-                            end
-                            return highlight
-                        end,
-                    },
-                },
-            },
-
-            -- Signature help when tying
-            signature = { enabled = true },
+        },
+        -- Signature help when tying
+        signature = { enabled = true },
         },
         opts_extend = { "sources.default" },
     }
