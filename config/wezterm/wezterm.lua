@@ -12,7 +12,7 @@ config = {
     window_decorations = "RESIZE", -- disable the title bar but enable the resizable border
     font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
     font_size = 12.5,
-    color_scheme = "DanQing (base16)",
+    color_scheme = "Dracula",
     default_cursor_style = 'BlinkingBlock',
     macos_window_background_blur = 25, -- Enable window background blur on macOS
     background = {
@@ -25,8 +25,6 @@ config = {
             saturation = 1.02,
             brightness = 0.25
         },
-        aspect_ratio = "contain",
-        opactity = 0.15,
         horizontal_align = "Center",
         vertical_align = "Middle",
         },
