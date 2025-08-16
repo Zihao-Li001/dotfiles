@@ -12,10 +12,10 @@ palette = "onedark"
 success_symbol = '[->](green)'
 
 [hostname]
-disable = true
+disabled = true
 
 [username]
-disable = true
+disabled = true
 
 [os]
 disabled = false
