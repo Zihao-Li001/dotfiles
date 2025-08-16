@@ -1,31 +1,28 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = """
-$directory\
-$git_branch\
-$git_status\
-$env_var\
-$fill\
-$python\
-$lua\
-$nodejs\
-$golang\
-$haskell\
-$rust\
-$ruby\
-$aws\
-$docker_context\
-$jobs\
+right_format="""
 $cmd_duration\
-$line_break\
-$character"""
+$env_var
+"""
 
 add_newline = false
 palette = "onedark"
 
 [character]
-success_symbol = '[->](bold green)'
+success_symbol = '[->](green)'
 
+[hostname]
+disable = true
+
+[username]
+disable = true
+
+[os]
+disabled = false
+
+[os.symbols]
+Ubuntu = "󰕈  "
+Macos = "🍎 "
 
 [directory]
 style = 'bold fg:dark_blue'

@@ -20,17 +20,17 @@ config = {
         {
             source = {
                 File = home .. "/dotfiles/config/Arknight_Personal_Terminal.png",
-        },
-        hsb = {
-            hue = 1.0,
-            saturation = 1.02,
-            brightness = 0.25
-        },
-        horizontal_align = "Center",
-        vertical_align = "Middle",
+            },
+            hsb = {
+                hue = 1.0,
+                saturation = 1.02,
+                brightness = 0.25
+            },
+            horizontal_align = "Center",
+            vertical_align = "Middle",
         },
         {
-        source = {
+            source = {
                 Color = "#282c35", -- dark purple
             },
             width = "100%",
@@ -41,8 +41,8 @@ config = {
     window_padding = {
         left = 8,
         right = 0,
-        top = 3,
-        bottom = 3,
+        top = 0,
+        bottom = 0,
     },
     initial_rows = 28,
     initial_cols = 100,
