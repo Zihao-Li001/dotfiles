@@ -30,6 +30,14 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
+-----------------
+-- Insert mode --
+-----------------
+vim.keymap.set('i', '<C-h>', '<Left>')
+vim.keymap.set('i', '<C-l>', '<Right>')
+vim.keymap.set('i', '<C-j>', '<Down>')
+
+vim.keymap.set('i', 'jk','<Esc>')
 ------------------------
 -- Custom keybinding ---
 ------------------------
