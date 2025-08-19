@@ -33,14 +33,14 @@ vim.keymap.set('v', '>', '>gv', opts)
 -----------------
 -- Insert mode --
 -----------------
-vim.keymap.set('i', '<C-h>', '<Left>')
-vim.keymap.set('i', '<C-l>', '<Right>')
-vim.keymap.set('i', '<C-j>', '<Down>')
-vim.keymap.set('i'n '<C-k>', '<Up>')
-vim.keymap.set('i', 'jk','<Esc>')
+vim.keymap.set('i', '<C-h>', '<Left>', opts)
+vim.keymap.set('i', '<C-l>', '<Right>', opts)
+vim.keymap.set('i', '<C-j>', '<Down>', opts)
+vim.keymap.set('i', '<C-k>', '<Up>', opts)
+vim.keymap.set('i', 'jk','<Esc>', opts)
 ------------------------
 -- Custom keybinding ---
 ------------------------
 
-vim.keymap.set('n','<leader>d', vim.diagnostic.open_float, { desc = 'Open Floating Diagnostice'})
-
+vim.keymap.set('n','<leader>d', vim.diagnostic.open_float, { desc = 'Open Floating Diagnostice'}, opts)
+vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle NvimTree (打开/关闭)' })
