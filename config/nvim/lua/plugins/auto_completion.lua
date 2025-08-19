@@ -11,9 +11,13 @@ return {
         -- build = 'cargo build --release',
         -- If you use nix, you can build from source using the latest nightly rust with:
         -- build = 'nix run .#build-plugin',
-
         opts = {
             keymap = {
+                preset = "enter",
+                ["<A-k>"] = { "select_prev", "fallback" },
+                ["<A-j>"] = { "select_next", "fallback" },
+                ['<Tab>'] = { 'snippet_forward', 'fallback' },
+                ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
                 ["<C-k>"] = false,
             },
 
