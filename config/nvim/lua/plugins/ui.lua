@@ -4,8 +4,14 @@ return {
         dependencies = {
             'nvim-tree/nvim-web-devicons'
         },
-        opts = {}
+        opts = {
+            options = {
+                theme = "catppuccin",
+            } 
+
+        }
     },
+
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
@@ -47,5 +53,5 @@ return {
             lsp_doc_border = false, -- add a border to hover docs and signature help
           },
         },
-    }
+    },
 }

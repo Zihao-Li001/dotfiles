@@ -4,6 +4,5 @@ vim.g.loaded_netrwPlugin = 1
 
 require('config.lazy')
 require('core.options')
-require('core.keymaps')
 require('core.lsp')
-require('core.colors')
+require('core.keymaps')

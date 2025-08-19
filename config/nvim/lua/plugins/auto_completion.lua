@@ -13,31 +13,8 @@ return {
         -- build = 'nix run .#build-plugin',
 
         opts = {
-            -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
-            -- 'super-tab' for mappings similar to VSCode (tab to accept)
-            -- 'enter' for enter to accept
-            -- 'none' for no mappings
-            --
-            -- All presets have the following mappings:
-            -- C-space: Open menu or open docs if already open
-            -- C-n/C-p or Up/Down: Select next/previous item
-            -- C-e: Hide menu
-            -- C-k: Toggle signature help (if signature.enabled = true)
-            --
-            -- See :h blink-cmp-config-keymap for defining your own keymap
             keymap = {
-                -- Each keymap may be a list of commands and/or functions
-                preset = "enter",
-                -- Select completions
-                ["<Up>"] = { "select_prev", "fallback" },
-                ["<Down>"] = { "select_next", "fallback" },
-                ["<Tab>"] = { "select_next", "fallback" },
-                ["<S-Tab>"] = { "select_prev", "fallback" },
-                -- Scroll documentation
-                ["<C-b>"] = { "scroll_documentation_up", "fallback" },
-                ["<C-f>"] = { "scroll_documentation_down", "fallback" },
-                -- Show/hide signature
-                ["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
+                ["<C-k>"] = false,
             },
 
             appearance = {
