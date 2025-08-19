@@ -36,7 +36,7 @@ vim.keymap.set('v', '>', '>gv', opts)
 vim.keymap.set('i', '<C-h>', '<Left>')
 vim.keymap.set('i', '<C-l>', '<Right>')
 vim.keymap.set('i', '<C-j>', '<Down>')
-
+vim.keymap.set('i'n '<C-k>', '<Up>')
 vim.keymap.set('i', 'jk','<Esc>')
 ------------------------
 -- Custom keybinding ---
