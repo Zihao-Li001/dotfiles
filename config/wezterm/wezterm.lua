@@ -3,6 +3,9 @@
 local wezterm = require("wezterm")
 local home = os.getenv("HOME")
 
+-- reconginze the local os
+-- custom window action
+
 config = wezterm.config_builder()
 
 config = {
@@ -10,7 +13,6 @@ config = {
     enable_tab_bar = true,
     hide_tab_bar_if_only_one_tab = true,    -- Hide the tab bar when there is only one tab
     window_close_confirmation = "NeverPrompt",
-    window_decorations = "RESIZE", -- disable the title bar but enable the resizable border
     font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
     font_size = 12.5,
     color_scheme = "DanQing (base16)",
@@ -35,5 +37,15 @@ config = {
     initial_rows = 28,
     initial_cols = 100,
 }
+
+-- Recogize OS 
+-- Custom window action according to OS
+if wezterm.target_triple:find("apple") then 
+    config.window_decorations = "RESIZE"
+elseif wezterm.target_triple:find("linux") then
+    config.window_decorations = "NONE"
+else 
+    config.window_decorations = "RESIZE"
+end
 
 return config
