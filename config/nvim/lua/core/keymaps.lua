@@ -33,10 +33,10 @@ vim.keymap.set('v', '>', '>gv', opts)
 -----------------
 -- Insert mode --
 -----------------
-vim.keymap.set('i', '<C-h>', '<Left>', opts)
-vim.keymap.set('i', '<C-l>', '<Right>', opts)
-vim.keymap.set('i', '<C-j>', '<Down>', opts)
-vim.keymap.set('i', '<C-k>', '<Up>', opts)
+vim.keymap.set('i', '<A-h>', '<Left>', opts)
+vim.keymap.set('i', '<A-l>', '<Right>', opts)
+vim.keymap.set('i', '<A-j>', '<Down>', opts)
+vim.keymap.set('i', '<A-k>', '<Up>', opts)
 vim.keymap.set('i', 'jk','<Esc>', opts)
 ------------------------
 -- Custom keybinding ---
