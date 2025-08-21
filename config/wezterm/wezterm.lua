@@ -10,15 +10,26 @@ config = wezterm.config_builder()
 
 config = {
     automatically_reload_config = true,
+
+    use_fancy_tab_bar = true,
     enable_tab_bar = true,
     hide_tab_bar_if_only_one_tab = true,    -- Hide the tab bar when there is only one tab
     window_close_confirmation = "NeverPrompt",
 
+    -- Font
+    font_size = 13,
+    line_height = 1.1,
     font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
-    font_size = 12.5,
-    color_scheme = "DanQing (base16)",
-    
+
+    -- Color Scheme   
+    color_scheme = "Catppuccin Mocha",
+    set_environment_variables = {
+        BAT_THEME = "Catppuccin-mocha",
+    },
+
+    -- Window
     default_cursor_style = 'BlinkingBlock',
+    adjust_window_size_when_changing_font_size = false,
     macos_window_background_blur = 70, -- Enable window background blur on macOS
     background = {
         {
@@ -31,13 +42,16 @@ config = {
         },
     },
     window_padding = {
-        left = 8,
-        right = 0,
-        top = 0,
-        bottom = 0,
+        left = 15,
+        right = 15,
+        top = 15,
+        bottom = 15,
     },
-    initial_rows = 28,
-    initial_cols = 100,
+    initial_rows = 37,
+    initial_cols = 127,
+
+    -- Keymap
+
 }
 
 -- Recogize OS 
