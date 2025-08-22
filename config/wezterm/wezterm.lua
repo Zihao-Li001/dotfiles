@@ -17,7 +17,7 @@ config = {
     window_close_confirmation = "NeverPrompt",
 
     -- Font
-    font_size = 13,
+    font_size = 12.5,
     line_height = 1.1,
     font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
 
@@ -30,7 +30,7 @@ config = {
     -- Window
     default_cursor_style = 'BlinkingBlock',
     adjust_window_size_when_changing_font_size = false,
-    macos_window_background_blur = 70, -- Enable window background blur on macOS
+    macos_window_background_blur = 60, -- Enable window background blur on macOS
     background = {
         {
             source = {
@@ -38,7 +38,7 @@ config = {
             },
             width = "100%",
             height = "100%",
-            opacity = 0.75,
+            opacity = 0.85,
         },
     },
     window_padding = {
