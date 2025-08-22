@@ -40,4 +40,12 @@ return {
       vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
     end,
   },
+  {
+    'echasnovski/mini.nvim',
+    version = false,
+
+    config = function()
+        require('mini.icons').setup()
+    end 
+  }
 }
