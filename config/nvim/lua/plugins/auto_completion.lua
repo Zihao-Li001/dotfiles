@@ -4,13 +4,16 @@ return {
         "saghen/blink.cmp",
         -- optional: provides snippets for the snippet source
         dependencies = { "rafamadriz/friendly-snippets" },
-
+    
         -- use a release tag to download pre-built binaries
-        version = "*",
+        version = "1.*",
         -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
         -- build = 'cargo build --release',
         -- If you use nix, you can build from source using the latest nightly rust with:
         -- build = 'nix run .#build-plugin',
+        
+        --@module 'blink.cmp'
+        --@type blink.cmp.Config
         opts = {
             keymap = {
                 preset = "enter",
@@ -46,9 +49,34 @@ return {
                 trigger = { show_on_trigger_character = true },
                 documentation = {
                     -- Show documentation automatically
-                    auto_show = true,
+                    auto_show = false,
                 },
+                menu = {
+                    draw = {
+                      components = {
+                        kind_icon = {
+                          text = function(ctx)
+                            local kind_icon, _, _ = require('mini.icons').get('lsp', ctx.kind)
+                            return kind_icon
+                          end,
+                          -- (optional) use highlights from mini.icons
+                          highlight = function(ctx)
+                            local _, hl, _ = require('mini.icons').get('lsp', ctx.kind)
+                            return hl
+                          end,
+                        },
+                        kind = {
+                          -- (optional) use highlights from mini.icons
+                          highlight = function(ctx)
+                            local _, hl, _ = require('mini.icons').get('lsp', ctx.kind)
+                            return hl
+                          end,
+                        }
+                      }
+                    }
+              }
         },
+        
         -- Signature help when tying
         signature = { enabled = true },
         },

@@ -8,7 +8,14 @@ return {
         opts = {
             options = {
                 theme = "catppuccin",
-            } 
+                always_divide_middle = false,
+                component_separators = { left = "", right = "" },
+                section_separators = {left = "", right = ""},
+            },
+            sections = {
+                lualine_a = { "mode" },
+                lualine_b = { "branch", "diff", "diagnostics" },
+            }
 
         }
     },
@@ -21,6 +28,19 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
         opts = {},
+    },
+    
+    {
+        "nvim-tree/nvim-web-devicons",
+        opts = {
+            override = {
+                -- copilot = {
+                --     icon = "",
+                --     color = "#cba6f7",
+                --     name = "Copilot",
+                -- },
+            },
+        },
     },
 
     -- rainbow-delimiters
@@ -56,12 +76,16 @@ return {
                   ["vim.lsp.util.convert_input_to_markdown_lines"] = false,
                   ["vim.lsp.util.stylize_markdown"] = false,
                 },
+                hover = {
+                    enabled = true,
+                    title =true,
+                },
               },
             
             -- you can enable a preset for easier configuration
             presets = {
                 bottom_search = false, -- use a classic bottom cmdline for search
-                command_palette = true, -- position the cmdline and popupmenu together
+                command_palette = { theme = 'catppuccin'}, -- position the cmdline and popupmenu together
                 long_message_to_split = true, -- long messages will be sent to a split
                 inc_rename = false, -- enables an input dialog for inc-rename.nvim
                 lsp_doc_border = false, -- add a border to hover docs and signature help
