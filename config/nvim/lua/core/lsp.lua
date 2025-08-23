@@ -7,4 +7,21 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = '󰌵',
     },
   },
+
+  virtual_text = false, -- 启用虚拟文本（显示诊断信息）
+  signs = true, -- 启用诊断标志（如错误、警告的左侧符号）
+  underline = true, -- 启用诊断下划线
+  update_in_insert = false, -- 不插入模式下更新诊断
+  severity_sort = true, -- 按严重性排序
+  float = {
+    border = "rounded", -- 圆角边框
+    width = 40, -- 固定宽度
+    max_width = math.floor(vim.o.columns * 0.3), -- 最大宽度为编辑器的 40%
+    scope = "line", -- 显示当前行的诊断
+    source = "always", -- 显示诊断来源（如 LSP 名称）
+    focusable = false, -- 禁止聚焦到浮动窗口
+  },
 })
+
+-- Keymap
+vim.keymap.set('n','<leader>d', vim.diagnostic.open_float, { desc = 'Open Floating Diagnostice' })
