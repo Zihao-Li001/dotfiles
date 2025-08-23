@@ -1,5 +1,34 @@
 return{
     {
+        "folke/trouble.nvim",
+        cmd = "Trouble",
+        opts = {
+          modes = {
+            preview_float = {
+              mode = "diagnostics",
+              preview = {
+                type = "float",
+                relative = "editor",
+                border = "rounded",
+                title = "Preview",
+                title_pos = "center",
+                position = { 0, -2 },
+                size = { width = 0.3, height = 0.3 },
+                zindex = 200,
+              },
+            },
+          },
+        }, 
+        keys = {
+            {
+                "<leader>xx",
+                "<cmd>Trouble diagnostics toggle<cr>",
+                desc = "diagnostics (Trouble)",
+            }
+        },
+    },
+
+    {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
         opts = {
@@ -16,7 +45,6 @@ return{
                 mode = "v", desc = "[Comment] Comment current selected lines",},
         -- },
         config = true,
-
         },
     },
 

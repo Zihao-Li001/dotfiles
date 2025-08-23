@@ -3,6 +3,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
+        
     opts = {
       transparent_background = true,
       custom_highlights = function(colors)
@@ -26,7 +27,7 @@ return {
         rainbow_delimiters = true,
         snacks = {
           enabled = true,
-          indent_scope_color = "flamingo", -- catppuccin color (eg. `lavender`) Default: text
+          indent_scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
         },
         which_key = true,
         flash = true,
@@ -35,17 +36,6 @@ return {
     },
     config = function(_, opts)
       require("catppuccin").setup(opts)
-
       vim.cmd.colorscheme("catppuccin")
-      vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
     end,
   },
-  {
-    'echasnovski/mini.nvim',
-    version = false,
-
-    config = function()
-        require('mini.icons').setup()
-    end 
-  }
-}
