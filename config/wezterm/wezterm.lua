@@ -21,26 +21,23 @@ config = {
     line_height = 1.1,
     font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
 
-    -- Color Scheme   
-    color_scheme = "Catppuccin Mocha",
-    set_environment_variables = {
-        BAT_THEME = "Catppuccin-mocha",
-    },
+    -- -- Color Scheme   
+    -- color_scheme = "Catppuccin Frappe",
 
     -- Window
     default_cursor_style = 'BlinkingBlock',
     adjust_window_size_when_changing_font_size = false,
     macos_window_background_blur = 60, -- Enable window background blur on macOS
-    background = {
-        {
-            source = {
-                Color = "#282c35", -- dark purple
-            },
-            width = "100%",
-            height = "100%",
-            opacity = 0.85,
-        },
-    },
+    -- background = {
+    --     {
+    --         source = {
+    --             Color = "#282c35", -- dark purple
+    --         },
+    --         width = "100%",
+    --         height = "100%",
+    --         opacity = 0.85,
+    --     },
+    -- },
     window_padding = {
         left = 15,
         right = 15,
@@ -63,5 +60,15 @@ elseif wezterm.target_triple:find("linux") then
 else 
     config.window_decorations = "RESIZE"
 end
+
+-- color_scheme 
+function scheme_for_appearance(appearance)
+    if appearance:find "Dark" then
+        return "Catppuccin Mocha"
+    else
+        return "Catppuccin Frappe"
+    end
+end
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 
 return config
