@@ -24,8 +24,8 @@ disabled = true
 disabled = false
 
 [os.symbols]
-Ubuntu = " "
-Macos = " "
+Ubuntu = " "
+Macos = " "
 
 [directory]
 style = 'bold fg:dark_blue'

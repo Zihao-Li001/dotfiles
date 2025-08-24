@@ -15,8 +15,7 @@ vim.diagnostic.config({
   severity_sort = true, -- 按严重性排序
   float = {
     border = "rounded", -- 圆角边框
-    width = 40, -- 固定宽度
-    max_width = math.floor(vim.o.columns * 0.3), -- 最大宽度为编辑器的 40%
+    width = math.floor(vim.o.columns * 0.4), -- 固定宽度
     scope = "line", -- 显示当前行的诊断
     source = "always", -- 显示诊断来源（如 LSP 名称）
     focusable = false, -- 禁止聚焦到浮动窗口
