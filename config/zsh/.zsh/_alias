@@ -1,0 +1,10 @@
+alias zshconfig='nvim ~/.zshrc'
+alias zsh-edit='nvim ~/.zsh/'
+
+alias ls='eza --git --icons --color=always --group-directories-first'
+alias ll='eza -la --git --icons --color=always --group-directories-first --grid'
+alias la='eza -la --git --icons --sort=modified --reverse --time-style relative --grid'
+
+alias zshconfig="vim ~/.zshrc"
+alias ws="cd ~/Desktop/WorkSpace"
+alias torch="conda activate torch-env"
