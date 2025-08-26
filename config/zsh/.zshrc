@@ -22,3 +22,4 @@ if [ -d "$ZSH_MODULE_DIR" ]; then
 fi
 
 unset ZSH_MODULE_DIR
+unset OS_TYPE

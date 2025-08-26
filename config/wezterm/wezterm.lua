@@ -28,16 +28,16 @@ config = {
     default_cursor_style = 'BlinkingBlock',
     adjust_window_size_when_changing_font_size = false,
     macos_window_background_blur = 60, -- Enable window background blur on macOS
-    -- background = {
-    --     {
-    --         source = {
-    --             Color = "#282c35", -- dark purple
-    --         },
-    --         width = "100%",
-    --         height = "100%",
-    --         opacity = 0.85,
-    --     },
-    -- },
+    background = {
+        {
+            source = {
+                Color = "#282c35", -- dark purple
+            },
+            width = "100%",
+            height = "100%",
+            opacity = 0.75,
+        },
+    },
     window_padding = {
         left = 15,
         right = 15,
