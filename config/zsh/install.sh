@@ -19,9 +19,12 @@ elif [[ "$(uname)" == "Linux" ]]; then
     echo "安装 eza..."
     sudo apt update
     sudo apt install -y gpg
-    # ... (这里是之前给你的 eza apt 仓库安装脚本) ...
-    # 注意: 如果 eza 已经进入了你正在使用的 Ubuntu 版本的默认 apt 仓库，你只需要 sudo apt install eza 即可。
-    # 建议先尝试 `sudo apt install eza`，如果失败再使用完整的脚本。
+    sudo mkdir -p /etc/apt/keyrings
+    wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+    echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+    sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+    sudo apt update
+    sudo apt install -y eza
 fi
 
 # Zsh 插件的 Git Submodule 初始化
