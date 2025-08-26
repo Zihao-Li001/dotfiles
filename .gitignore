@@ -1,8 +1,6 @@
 # IDE and editor files
-.idea/
-.vscode/
 *.iml
-
+lazy-lock.json
 
 # System files
 .DS_Store
