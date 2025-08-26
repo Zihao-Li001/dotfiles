@@ -27,5 +27,7 @@ if [ -d "$ZSH_MODULE_DIR" ]; then
     source "${ZSH_MODULE_DIR}/_plugins"
 fi
 
+eval "$(zoxide init zsh)"
+
 unset ZSH_MODULE_DIR
 unset OS_TYPE
