@@ -29,14 +29,28 @@ config = {
     adjust_window_size_when_changing_font_size = false,
     macos_window_background_blur = 60, -- Enable window background blur on macOS
     background = {
-        {
-            source = {
-                Color = "#282c35", -- dark purple
+        -- {
+            -- {
+            --     source = {
+            --         File = home .. "/dotfiles/config/wave-color-nord.jpg",
+            --         -- File = home .. "/dotfiles/config/Arknight.png",
+            --     },
+            --     hsb = {
+            --         hue = 1.0,
+            --         saturation = 1.02,
+            --         brightness = 0.45,
+            --     },
+            --     horizontal_align = "Center",
+            --     vertical_align = "Middle",
+            -- },
+            { source = {
+                    Color = "#282c35", -- dark purple
+                },
+                width = "100%",
+                height = "100%",
+                opacity = 0.45,
             },
-            width = "100%",
-            height = "100%",
-            opacity = 0.75,
-        },
+        -- },
     },
     window_padding = {
         left = 15,
