@@ -41,4 +41,4 @@ vim.keymap.set('i', 'jk','<Esc>', opts)
 -- Custom keybinding ---
 ------------------------
 vim.keymap.set('n','<leader>d', vim.diagnostic.open_float, { desc = 'Open Floating Diagnostice' })
-vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle NvimTree (打开/关闭)' })
+vim.keymap.set('n', '<C-r>', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle NvimTree (打开/关闭)' })

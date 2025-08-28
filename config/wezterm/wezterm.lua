@@ -6,7 +6,7 @@ local home = os.getenv("HOME")
 -- reconginze the local os
 -- custom window action
 
-config = wezterm.config_builder()
+local config = wezterm.config_builder()
 
 config = {
     automatically_reload_config = true,
@@ -30,25 +30,27 @@ config = {
     macos_window_background_blur = 60, -- Enable window background blur on macOS
     background = {
         -- {
-            -- {
-            --     source = {
-            --         File = home .. "/dotfiles/config/wave-color-nord.jpg",
-            --         -- File = home .. "/dotfiles/config/Arknight.png",
-            --     },
-            --     hsb = {
-            --         hue = 1.0,
-            --         saturation = 1.02,
-            --         brightness = 0.45,
-            --     },
-            --     horizontal_align = "Center",
-            --     vertical_align = "Middle",
-            -- },
+            {
+                source = {
+                    File = home .. "/dotfiles/config/wallpaper/Arknight.png",
+                    -- File = home .. "/dotfiles/config/wallpaper/ubuntu-magenta-blue-1920x1080.png",
+                    -- File = home .. "/dotfiles/config/wallpaper/Arknight.png",
+                },
+                hsb = {
+                    hue = 1.0,
+                    saturation = 1.02,
+                    brightness = 0.45,
+                },
+                horizontal_align = "Center",
+                vertical_align = "Middle",
+                opacity = 0.95,
+            },
             { source = {
                     Color = "#282c35", -- dark purple
                 },
                 width = "100%",
                 height = "100%",
-                opacity = 0.45,
+                opacity = 0.7,
             },
         -- },
     },

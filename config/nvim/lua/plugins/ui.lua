@@ -14,9 +14,20 @@ return {
             },
             sections = {
                 lualine_a = { "mode" },
-                lualine_b = { "branch", "diff", "diagnostics" },
-            }
-        }
+                lualine_b = {
+                    -- "branch",
+                    -- "diff",
+                    "diagnostics",
+                    {
+                        'filename',
+                        file_status = false,
+                        path = 1
+                    },
+                },
+                lualine_c = {},
+                lualine_x = {'filetype'},
+            },
+        },
     },
 
     -- nvim-tree
@@ -28,7 +39,7 @@ return {
         },
         opts = {},
     },
-    
+
     {
         "nvim-tree/nvim-web-devicons",
         opts = {
@@ -98,7 +109,7 @@ return {
                     title =true,
                 },
               },
-            
+
             -- you can enable a preset for easier configuration
             presets = {
                 bottom_search = false, -- use a classic bottom cmdline for search
@@ -112,7 +123,7 @@ return {
                 { filter = { event = "msg_show", kind = "search_count" }, opts = { skip = true } },
                 -- Hide written message
                 { filter = { event = "msg_show", kind = "" }, opts = { skip = true } },
-            },           
+            },
         },
     },
 
@@ -123,7 +134,7 @@ return {
 
         config = function()
             require('mini.icons').setup()
-        end 
+        end
     },
 
     {
