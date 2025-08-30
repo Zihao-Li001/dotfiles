@@ -7,6 +7,11 @@ ZSH_PLUGINS_DIR="$HOME/dotfiles/config/zsh/.zsh/plugins"
 if [ -f "${ZSH_PLUGINS_DIR}/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
     source "${ZSH_PLUGINS_DIR}/zsh-autosuggestions/zsh-autosuggestions.zsh"
     # echo "zsh-autosuggestions loaded"
+    export ZSH_AUTOSUGGEST_USE_ASYNC=true
+    export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#00aaff,bold"
+    export ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=(forward-word)
+    bindkey '^F' forward-word                    # Ctrl+F 向前移动一个单词
+    bindkey '^B' backward-word                   # Ctrl+B 向后移动一个单词
 fi
 
 # eza

@@ -32,7 +32,7 @@ config = {
         -- {
             {
                 source = {
-                    File = home .. "/dotfiles/config/wallpaper/Arknight.png",
+                    File = home .. "/dotfiles/config/wallpaper/apple-magenta-blue-1920x1080.png",
                     -- File = home .. "/dotfiles/config/wallpaper/ubuntu-magenta-blue-1920x1080.png",
                     -- File = home .. "/dotfiles/config/wallpaper/Arknight.png",
                 },
@@ -43,15 +43,15 @@ config = {
                 },
                 horizontal_align = "Center",
                 vertical_align = "Middle",
-                opacity = 0.95,
+                opacity = 0.5,
             },
-            { source = {
-                    Color = "#282c35", -- dark purple
-                },
-                width = "100%",
-                height = "100%",
-                opacity = 0.7,
-            },
+            -- { source = {
+            --         Color = "#282c35", -- dark purple
+            --     },
+            --     width = "100%",
+            --     height = "100%",
+            --     opacity = 0.7,
+            -- },
         -- },
     },
     window_padding = {
@@ -60,7 +60,7 @@ config = {
         top = 15,
         bottom = 15,
     },
-    initial_rows = 37,
+    initial_rows = 32,
     initial_cols = 127,
 
     -- Keymap
