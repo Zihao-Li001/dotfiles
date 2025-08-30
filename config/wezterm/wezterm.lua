@@ -30,21 +30,21 @@ config = {
     macos_window_background_blur = 60, -- Enable window background blur on macOS
     background = {
         -- {
-            {
-                source = {
-                    File = home .. "/dotfiles/config/wallpaper/Arknight.png",
-                    -- File = home .. "/dotfiles/config/wallpaper/ubuntu-magenta-blue-1920x1080.png",
-                    -- File = home .. "/dotfiles/config/wallpaper/Arknight.png",
-                },
-                hsb = {
-                    hue = 1.0,
-                    saturation = 1.02,
-                    brightness = 0.45,
-                },
-                horizontal_align = "Center",
-                vertical_align = "Middle",
-                opacity = 0.95,
-            },
+            -- {
+            --     source = {
+            --         File = home .. "/dotfiles/config/wallpaper/Arknight.png",
+            --         -- File = home .. "/dotfiles/config/wallpaper/ubuntu-magenta-blue-1920x1080.png",
+            --         -- File = home .. "/dotfiles/config/wallpaper/Arknight.png",
+            --     },
+            --     hsb = {
+            --         hue = 1.0,
+            --         saturation = 1.02,
+            --         brightness = 0.45,
+            --     },
+            --     horizontal_align = "Center",
+            --     vertical_align = "Middle",
+            --     opacity = 0.95,
+            -- },
             { source = {
                     Color = "#282c35", -- dark purple
                 },
