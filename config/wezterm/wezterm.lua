@@ -32,7 +32,7 @@ config = {
         {
             {
                 source = {
-                    File = home .. "/dotfiles/config/wallpaper/apple-magenta-blue-1920x1080.png",
+                    File = home .. "/dotfiles/config/wallpaper/flatppuccin_4k_macchiato.png",
                     -- File = home .. "/dotfiles/config/wallpaper/ubuntu-magenta-blue-1920x1080.png",
                     -- File = home .. "/dotfiles/config/wallpaper/Arknight.png",
                 },
