@@ -29,22 +29,22 @@ config = {
     adjust_window_size_when_changing_font_size = false,
     macos_window_background_blur = 60, -- Enable window background blur on macOS
     background = {
-        -- {
-            -- {
-            --     source = {
-            --         File = home .. "/dotfiles/config/wallpaper/Arknight.png",
-            --         -- File = home .. "/dotfiles/config/wallpaper/ubuntu-magenta-blue-1920x1080.png",
-            --         -- File = home .. "/dotfiles/config/wallpaper/Arknight.png",
-            --     },
-            --     hsb = {
-            --         hue = 1.0,
-            --         saturation = 1.02,
-            --         brightness = 0.45,
-            --     },
-            --     horizontal_align = "Center",
-            --     vertical_align = "Middle",
-            --     opacity = 0.95,
-            -- },
+        {
+            {
+                source = {
+                    File = home .. "/dotfiles/config/wallpaper/apple-magenta-blue-1920x1080.png",
+                    -- File = home .. "/dotfiles/config/wallpaper/ubuntu-magenta-blue-1920x1080.png",
+                    -- File = home .. "/dotfiles/config/wallpaper/Arknight.png",
+                },
+                hsb = {
+                    hue = 1.0,
+                    saturation = 1.02,
+                    brightness = 0.45,
+                },
+                horizontal_align = "Center",
+                vertical_align = "Middle",
+                opacity = 0.5,
+            },
             { source = {
                     Color = "#282c35", -- dark purple
                 },
@@ -52,7 +52,7 @@ config = {
                 height = "100%",
                 opacity = 0.7,
             },
-        -- },
+        },
     },
     window_padding = {
         left = 15,
@@ -60,7 +60,7 @@ config = {
         top = 15,
         bottom = 15,
     },
-    initial_rows = 37,
+    initial_rows = 32,
     initial_cols = 127,
 
     -- Keymap
