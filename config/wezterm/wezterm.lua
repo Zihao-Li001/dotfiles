@@ -29,7 +29,7 @@ config = {
     adjust_window_size_when_changing_font_size = false,
     macos_window_background_blur = 60, -- Enable window background blur on macOS
     background = {
-        {
+        -- {
             {
                 source = {
                     File = home .. "/dotfiles/config/wallpaper/flatppuccin_4k_macchiato.png",
@@ -43,16 +43,16 @@ config = {
                 },
                 horizontal_align = "Center",
                 vertical_align = "Middle",
-                opacity = 0.5,
+                opacity = 0.9,
             },
             { source = {
                     Color = "#282c35", -- dark purple
                 },
                 width = "100%",
                 height = "100%",
-                opacity = 0.7,
+                opacity = 0.5,
             },
-        },
+        -- },
     },
     window_padding = {
         left = 15,
