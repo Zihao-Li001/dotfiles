@@ -42,7 +42,7 @@ return{
     {
         "numToStr/Comment.nvim",
         keys = {
-            {"<leader>/", function() require("Comment.api").toggle.linewise.current() end,  
+            {"<leader>/", function() require("Comment.api").toggle.linewise.current() end,
                 mode = "n", desc = "[Comment] Comment current line",},
             {"<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
                 mode = "v", desc = "[Comment] Comment current selected lines",},
@@ -67,4 +67,24 @@ return{
         -- },
         config = true,
     },
+    {
+        'ray-x/lsp_signature.nvim',
+        event = "VeryLazy",
+        config = function()
+            require('lsp_signature').setup({
+                enabled = true,
+                bind = true,
+                floating_window = true,
+                floating_window_above_cur_line = true,
+                max_height = 10,
+                max_width = 80,
+                auto_close_after = 3,
+                min_length = 6,
+                toggle_key = '<M-x>',
+                zindex = 200,
+                show_source = false,
+                override = true,
+            })
+        end
+    }
 }

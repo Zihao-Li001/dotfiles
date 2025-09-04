@@ -9,7 +9,7 @@ vim.diagnostic.config({
   },
 
   virtual_text = false, -- 启用虚拟文本（显示诊断信息）
-  signs = true, -- 启用诊断标志（如错误、警告的左侧符号）
+  -- signs = true, -- 启用诊断标志（如错误、警告的左侧符号）
   underline = true, -- 启用诊断下划线
   update_in_insert = false, -- 不插入模式下更新诊断
   severity_sort = true, -- 按严重性排序

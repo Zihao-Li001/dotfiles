@@ -99,7 +99,6 @@ return {
                 enabled = false,
             },
             lsp = {
-                -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
                 override = {
                   ["vim.lsp.util.convert_input_to_markdown_lines"] = false,
                   ["vim.lsp.util.stylize_markdown"] = false,
@@ -107,6 +106,9 @@ return {
                 hover = {
                     enabled = true,
                     title =true,
+                },
+                signature = {
+                    auto_open = { enabled = false },
                 },
               },
 

@@ -78,7 +78,7 @@ return {
         },
 
         -- Signature help when tying
-        signature = { enabled = true },
+        signature = { enabled = false },
         },
         opts_extend = { "sources.default" },
     }
