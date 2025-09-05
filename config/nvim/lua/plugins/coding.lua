@@ -58,33 +58,40 @@ return{
           "folke/snacks.nvim",
         },
         event = "VeryLazy",
-        -- stylua: ignore
-        -- keys = {
-        --   ---@diagnostic disable-next-line: undefined-field
-        --   { "<leader>st", function() require("snacks").picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME", "BUG", "FIXIT", "HACK", "WARN", "ISSUE"  } }) end, desc = "[TODO] Pick todos (without NOTE)", },
-        --   ---@diagnostic disable-next-line: undefined-field
-        --   { "<leader>sT", function() require("snacks").picker.todo_comments() end, desc = "[TODO] Pick todos (with NOTE)", },
-        -- },
         config = true,
     },
     {
         'ray-x/lsp_signature.nvim',
         event = "VeryLazy",
-        config = function()
-            require('lsp_signature').setup({
-                enabled = true,
-                bind = true,
-                floating_window = true,
-                floating_window_above_cur_line = true,
-                max_height = 10,
-                max_width = 80,
-                auto_close_after = 3,
-                min_length = 6,
-                toggle_key = '<M-x>',
-                zindex = 200,
-                show_source = false,
-                override = true,
-            })
-        end
-    }
+        opts = {
+            bind = true,
+            max_width = function()
+                return vim.api.nvim_win_get_width(0)*0.8
+            end,
+            handler_opts = {
+                border = "rounded"
+            },
+            floating_window_off_x = 5,
+            floating_window_off_y = function()
+                local linenr = vim.api.nvim_win_get_cursor(0)[1]
+                local pumheight = vim.o.pumheight
+                local winline = vim.fn.winline()
+                local winheight = vim.fn.winheight(0)
+                if winline - 1 < pumheight then
+                    return pumheight
+                end
+                if winheight - winline < pumheight then
+                    return -pumheight
+                end
+                return 0
+            end,
+            close_timeout = 4000,
+            -- move_signature_window_key = {
+            --     '<M-k>',
+            --     '<M-j>',
+            --     '<M-h>',
+            --     '<M-l>',
+            -- },
+        }
+    },
 }

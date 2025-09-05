@@ -17,12 +17,18 @@ config = {
     window_close_confirmation = "NeverPrompt",
 
     -- Font
-    font_size = 12.5,
-    line_height = 1.1,
-    font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
+    font_size = 14,
+    line_height = 1.0,
+    -- font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
+    font = wezterm.font_with_fallback {
+            "Maple Mono NF",
+            "LXGW WenKai Screen",
+        -- { family = "Maple Mono NF CN" },
+        -- { family = "LXGW WenKai Screen" },
+    },
 
     -- -- Color Scheme   
-    -- color_scheme = "Catppuccin Frappe",
+    color_scheme = "Catppuccin Frappe",
 
     -- Window
     default_cursor_style = 'BlinkingBlock',
