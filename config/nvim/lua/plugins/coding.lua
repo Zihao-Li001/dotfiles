@@ -1,3 +1,4 @@
+
 return{
     {
         "folke/trouble.nvim",
@@ -55,7 +56,6 @@ return{
         "folke/todo-comments.nvim",
         dependencies = {
           "nvim-lua/plenary.nvim",
-          "folke/snacks.nvim",
         },
         event = "VeryLazy",
         config = true,

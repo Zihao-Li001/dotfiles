@@ -10,7 +10,7 @@ return{
               sync_install = true,
               highlight = {
                       enable = true,
-                      languages = {'python', 'markdown'}
+                      -- languages = {'python', 'markdown'}
                   },
               indent = { enable = true },
             })
