@@ -66,7 +66,7 @@ return{
         opts = {
             bind = true,
             max_width = function()
-                return vim.api.nvim_win_get_width(0)*0.8
+                return  math.floor(vim.api.nvim_win_get_width(0) * 0.8)
             end,
             handler_opts = {
                 border = "rounded"
