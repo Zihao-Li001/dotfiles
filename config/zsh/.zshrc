@@ -3,6 +3,9 @@
 
 ZSH_MODULE_DIR="$HOME/dotfiles/config/zsh/.zsh"
 
+# 仅在 SSH 连接时设置 TERM 变量
+export SNACKS_WEZTERM=true
+
 # ===
 # Plugins & Config 
 # ===
