@@ -12,7 +12,7 @@ return {
 			"neovim/nvim-lspconfig",
 		},
 		opts = {
-			ensure_installed = { "pylsp", "lua_ls", "clangd", "bash_ls" },
+			ensure_installed = { "pylsp", "lua_ls", "clangd" },
 			automatic_installation = true,
 		},
 	},

@@ -22,3 +22,6 @@ else
     fi
 fi
 unset __conda_setup
+
+# LaTeX: TeX Live
+export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
