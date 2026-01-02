@@ -14,7 +14,7 @@ config = {
 	window_close_confirmation = "NeverPrompt",
 
 	-- Font
-	font_size = 12.0,
+	font_size = 14.0,
 	line_height = 1.1,
 	-- font = wezterm.font("JetBrains Mono", { weight = "DemiBold" }),
 	font = wezterm.font_with_fallback({
@@ -31,13 +31,26 @@ config = {
 	default_cursor_style = "BlinkingBlock",
 	adjust_window_size_when_changing_font_size = false,
 	macos_window_background_blur = 60, -- Enable window background blur on macOS
-	background = {
-		-- {
+	window_padding = {
+		left = 15,
+		right = 15,
+		top = 15,
+		bottom = 15,
+	},
+	initial_rows = 34,
+	initial_cols = 150,
+
+	-- Keymap
+}
+
+-- Recogize OS
+-- Custom window action according to OS
+if wezterm.target_triple:find("apple") then
+	config.window_decorations = "RESIZE"
+	config. background = {
 		{
 			source = {
-				File = home .. "/dotfiles/catppuccin-wallpapers/waves/cat-waves.png",
-				-- -- File = home .. "/dotfiles/config/wallpaper/ubuntu-magenta-blue-1920x1080.png",
-				-- File = home .. "/dotfiles/config/wallpaper/Arknight.png",
+				File = home .. "/dotfiles/config/wallpaper/apple-magenta-blue-1920x1080.png",
 			},
 			hsb = {
 				hue = 1.0,
@@ -46,7 +59,7 @@ config = {
 			},
 			horizontal_align = "Center",
 			vertical_align = "Middle",
-			opacity = 0.80,
+			opacity = 0.8,
 		},
 		{
 			source = {
@@ -56,26 +69,32 @@ config = {
 			height = "100%",
 			opacity = 0.5,
 		},
-		-- },
-	},
-	window_padding = {
-		left = 15,
-		right = 15,
-		top = 15,
-		bottom = 15,
-	},
-	initial_rows = 34,
-	initial_cols = 170,
-
-	-- Keymap
-}
-
--- Recogize OS
--- Custom window action according to OS
-if wezterm.target_triple:find("apple") then
-	config.window_decorations = "RESIZE"
+	}
 elseif wezterm.target_triple:find("linux") then
 	config.window_decorations = "NONE"
+	config. background = {
+		{
+			source = {
+				File = home .. "/dotfiles/config/wallpaper/ubuntu-magenta-blue-1920x1080.png",
+			},
+			hsb = {
+				hue = 1.0,
+				saturation = 1.00,
+				brightness = 0.03,
+			},
+			horizontal_align = "Center",
+			vertical_align = "Middle",
+			opacity = 0.8,
+		},
+		{
+			source = {
+				Color = "#282c35", -- dark purple
+			},
+			width = "100%",
+			height = "100%",
+			opacity = 0.5,
+		},
+	}
 else
 	config.window_decorations = "TITLE"
 end
