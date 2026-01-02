@@ -47,7 +47,7 @@ config = {
 -- Custom window action according to OS
 if wezterm.target_triple:find("apple") then
 	config.window_decorations = "RESIZE"
-	config. background = {
+	config.background = {
 		{
 			source = {
 				File = home .. "/dotfiles/config/wallpaper/apple-magenta-blue-1920x1080.png",
@@ -71,28 +71,16 @@ if wezterm.target_triple:find("apple") then
 		},
 	}
 elseif wezterm.target_triple:find("linux") then
+	config.font_size = 12.5
 	config.window_decorations = "NONE"
-	config. background = {
-		{
-			source = {
-				File = home .. "/dotfiles/config/wallpaper/ubuntu-magenta-blue-1920x1080.png",
-			},
-			hsb = {
-				hue = 1.0,
-				saturation = 1.00,
-				brightness = 0.03,
-			},
-			horizontal_align = "Center",
-			vertical_align = "Middle",
-			opacity = 0.8,
-		},
+	config.background = {
 		{
 			source = {
 				Color = "#282c35", -- dark purple
 			},
 			width = "100%",
 			height = "100%",
-			opacity = 0.5,
+			opacity = 0.8,
 		},
 	}
 else
