@@ -41,16 +41,7 @@ return {
 
 	{
 		"numToStr/Comment.nvim",
-		keys = {
-			{
-				"<leader>/",
-				function()
-					require("Comment.api").toggle.linewise.current()
-				end,
-				mode = { "n", "v" },
-				desc = "[Comment] Comment current line",
-			},
-		},
+		keys = {},
 		config = function()
 			require("Comment").setup()
 			require("Comment.ft").set("foam", "// %s")

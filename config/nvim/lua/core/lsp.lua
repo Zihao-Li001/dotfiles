@@ -1,5 +1,8 @@
-vim.lsp.enable("lua_ls")
+vim.lsp.config("python_ls", require("core.lsp.python_ls"))
+vim.lsp.config("lua_ls", require("core.lsp.lua_ls"))
+vim.lsp.config("marksman", require("core.lsp.marksman"))
 vim.lsp.enable("python_ls")
+vim.lsp.enable("lua_ls")
 vim.lsp.enable("marksman")
 
 vim.api.nvim_create_autocmd("LspAttach", {

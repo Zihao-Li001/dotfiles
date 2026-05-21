@@ -1,13 +1,13 @@
 return {
-	-- lualine
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
+			"catppuccin/nvim",
 		},
 		opts = {
 			options = {
-				theme = "catppuccin",
+				theme = "auto",
 				always_divide_middle = false,
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
@@ -15,8 +15,8 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = {
-					-- "branch",
-					-- "diff",
+					"branch",
+					"diff",
 					"diagnostics",
 					{
 						"filename",
@@ -39,46 +39,6 @@ return {
 		},
 		opts = {},
 	},
-
-	{
-		"nvim-tree/nvim-web-devicons",
-		opts = {
-			override = {
-				-- copilot = {
-				--     icon = "",
-				--     color = "#cba6f7",
-				--     name = "Copilot",
-				-- },
-			},
-		},
-	},
-
-	-- rainbow-delimiters
-	-- {
-	-- 	"HiPhish/rainbow-delimiters.nvim",
-	-- 	config = function()
-	-- 		require("rainbow-delimiters.setup").setup({
-	-- 			strategy = {
-	-- 				[""] = "rainbow-delimiters.strategy.global",
-	-- 				commonlisp = "rainbow-delimiters.strategy.local",
-	-- 			},
-	-- 			query = {
-	-- 				[""] = "rainbow-delimiters",
-	-- 				latex = "rainbow-blocks",
-	-- 			},
-	-- 			highlight = {
-	-- 				"RainbowDelimiterRed",
-	-- 				"RainbowDelimiterYellow",
-	-- 				"RainbowDelimiterBlue",
-	-- 				"RainbowDelimiterOrange",
-	-- 				"RainbowDelimiterGreen",
-	-- 				"RainbowDelimiterViolet",
-	-- 				"RainbowDelimiterCyan",
-	-- 			},
-	-- 			blacklist = { "c", "cpp" },
-	-- 		})
-	-- 	end,
-	-- },
 
 	-- noice
 	{
